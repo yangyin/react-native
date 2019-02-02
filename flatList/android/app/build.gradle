@@ -103,6 +103,10 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+        manifestPlaceholders = [
+                JPUSH_APPKEY: "bb1d39ee9ab83028f1412d9b",	//在此替换你的APPKey
+                APP_CHANNEL: "developer-default"		//应用渠道号
+        ]
     }
     splits {
         abi {
@@ -134,6 +138,7 @@ android {
 }
 
 dependencies {
+    implementation project(':jmessage-react-plugin')
     implementation project(':react-native-gesture-handler')
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"

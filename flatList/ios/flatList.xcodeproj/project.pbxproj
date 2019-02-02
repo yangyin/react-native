@@ -40,6 +40,23 @@
 		ED297163215061F000B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED297162215061F000B7C4FE /* JavaScriptCore.framework */; };
 		ED2971652150620600B7C4FE /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2971642150620600B7C4FE /* JavaScriptCore.framework */; };
 		2D18D2606F304173954BF787 /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D75EB62CCFE4F4B82CDAC11 /* libRNGestureHandler.a */; };
+		676F3ADE2A7E4970B16B7E33 /* libRCTJCoreModule.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF1040105E3F483B80D734B5 /* libRCTJCoreModule.a */; };
+		7440B77751964376A363DBAD /* libRCTJMessageModule.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC97405C0D024AF58A017E7E /* libRCTJMessageModule.a */; };
+		FF66086E7E324DE4ABA347F2 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CC633D7CC3424C66BAD0FA6A /* libz.tbd */; };
+		CE87692D86354BD1B620AE00 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C5118127941450DB98271AB /* UserNotifications.framework */; };
+		14C4632BB5484D2F8E91D0F5 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16BC65F212CA4AFFA14A4452 /* CoreTelephony.framework */; };
+		437F668326CB423F823FCD40 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A17492D6AEFB4950A8595C17 /* Security.framework */; };
+		651F5CF77CAB400DAD36C998 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 45DDDC3FCCF749989C84840C /* CFNetwork.framework */; };
+		B361227D8C2F40DAB323FAF6 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E1FF634989497BA6FAB5D0 /* CoreFoundation.framework */; };
+		89FE246F2AC84E5CB34EF831 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E596F8A45FFD4E4EB23BFC26 /* SystemConfiguration.framework */; };
+		C1AD9961CC2840F3ABDE6995 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07027CC265544B22B31DB215 /* Foundation.framework */; };
+		011D7B8BA0F7483D953693A6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51248B55D6A24E22AA0F34DB /* UIKit.framework */; };
+		2A57EF66AA2549C5B80EF4CF /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 68D488DDEE9E4F6E87977E5A /* libresolv.tbd */; };
+		34EBB2E8A01A4CFB96288D6D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5611E83648AE43D691135F55 /* CoreGraphics.framework */; };
+		97441121D3B2450399E1A5FB /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F97776A31774FEBAF91B7F8 /* CoreAudio.framework */; };
+		C4199B22E5F04144BC2214D1 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E9C075FEF2B414E9D4B0E26 /* AudioToolbox.framework */; };
+		E0BB0C935E234436BBCAA837 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9691ECE4BC024FCEAC720429 /* MobileCoreServices.framework */; };
+		191AFB527FFF452BB3603AE5 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 01F3A5E71F1F49D68C6AA738 /* libsqlite3.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -349,6 +366,25 @@
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		78C3DF5E7CDB405990B7644E /* RNGestureHandler.xcodeproj */ = {isa = PBXFileReference; name = "RNGestureHandler.xcodeproj"; path = "../node_modules/react-native-gesture-handler/ios/RNGestureHandler.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		4D75EB62CCFE4F4B82CDAC11 /* libRNGestureHandler.a */ = {isa = PBXFileReference; name = "libRNGestureHandler.a"; path = "libRNGestureHandler.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		C9D2D041A76A4209A57C265F /* RCTJCoreModule.xcodeproj */ = {isa = PBXFileReference; name = "RCTJCoreModule.xcodeproj"; path = "../node_modules/jcore-react-native/ios/RCTJCoreModule.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		EF1040105E3F483B80D734B5 /* libRCTJCoreModule.a */ = {isa = PBXFileReference; name = "libRCTJCoreModule.a"; path = "libRCTJCoreModule.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		28586659F8AB4E2F94FA88DD /* RCTJMessageModule.xcodeproj */ = {isa = PBXFileReference; name = "RCTJMessageModule.xcodeproj"; path = "../node_modules/jmessage-react-plugin/ios/RCTJMessageModule.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		FC97405C0D024AF58A017E7E /* libRCTJMessageModule.a */ = {isa = PBXFileReference; name = "libRCTJMessageModule.a"; path = "libRCTJMessageModule.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		CC633D7CC3424C66BAD0FA6A /* libz.tbd */ = {isa = PBXFileReference; name = "libz.tbd"; path = "usr/lib/libz.tbd"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = sourcecode.text-based-dylib-definition; explicitFileType = undefined; includeInIndex = 0; };
+		7C5118127941450DB98271AB /* UserNotifications.framework */ = {isa = PBXFileReference; name = "UserNotifications.framework"; path = "System/Library/Frameworks/UserNotifications.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		16BC65F212CA4AFFA14A4452 /* CoreTelephony.framework */ = {isa = PBXFileReference; name = "CoreTelephony.framework"; path = "System/Library/Frameworks/CoreTelephony.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		A17492D6AEFB4950A8595C17 /* Security.framework */ = {isa = PBXFileReference; name = "Security.framework"; path = "System/Library/Frameworks/Security.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		45DDDC3FCCF749989C84840C /* CFNetwork.framework */ = {isa = PBXFileReference; name = "CFNetwork.framework"; path = "System/Library/Frameworks/CFNetwork.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		65E1FF634989497BA6FAB5D0 /* CoreFoundation.framework */ = {isa = PBXFileReference; name = "CoreFoundation.framework"; path = "System/Library/Frameworks/CoreFoundation.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		E596F8A45FFD4E4EB23BFC26 /* SystemConfiguration.framework */ = {isa = PBXFileReference; name = "SystemConfiguration.framework"; path = "System/Library/Frameworks/SystemConfiguration.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		07027CC265544B22B31DB215 /* Foundation.framework */ = {isa = PBXFileReference; name = "Foundation.framework"; path = "System/Library/Frameworks/Foundation.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		51248B55D6A24E22AA0F34DB /* UIKit.framework */ = {isa = PBXFileReference; name = "UIKit.framework"; path = "System/Library/Frameworks/UIKit.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		68D488DDEE9E4F6E87977E5A /* libresolv.tbd */ = {isa = PBXFileReference; name = "libresolv.tbd"; path = "usr/lib/libresolv.tbd"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = sourcecode.text-based-dylib-definition; explicitFileType = undefined; includeInIndex = 0; };
+		5611E83648AE43D691135F55 /* CoreGraphics.framework */ = {isa = PBXFileReference; name = "CoreGraphics.framework"; path = "System/Library/Frameworks/CoreGraphics.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		9F97776A31774FEBAF91B7F8 /* CoreAudio.framework */ = {isa = PBXFileReference; name = "CoreAudio.framework"; path = "System/Library/Frameworks/CoreAudio.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		7E9C075FEF2B414E9D4B0E26 /* AudioToolbox.framework */ = {isa = PBXFileReference; name = "AudioToolbox.framework"; path = "System/Library/Frameworks/AudioToolbox.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		9691ECE4BC024FCEAC720429 /* MobileCoreServices.framework */ = {isa = PBXFileReference; name = "MobileCoreServices.framework"; path = "System/Library/Frameworks/MobileCoreServices.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		01F3A5E71F1F49D68C6AA738 /* libsqlite3.tbd */ = {isa = PBXFileReference; name = "libsqlite3.tbd"; path = "usr/lib/libsqlite3.tbd"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = sourcecode.text-based-dylib-definition; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -378,6 +414,23 @@
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				2D18D2606F304173954BF787 /* libRNGestureHandler.a in Frameworks */,
+				676F3ADE2A7E4970B16B7E33 /* libRCTJCoreModule.a in Frameworks */,
+				7440B77751964376A363DBAD /* libRCTJMessageModule.a in Frameworks */,
+				FF66086E7E324DE4ABA347F2 /* libz.tbd in Frameworks */,
+				CE87692D86354BD1B620AE00 /* UserNotifications.framework in Frameworks */,
+				14C4632BB5484D2F8E91D0F5 /* CoreTelephony.framework in Frameworks */,
+				437F668326CB423F823FCD40 /* Security.framework in Frameworks */,
+				651F5CF77CAB400DAD36C998 /* CFNetwork.framework in Frameworks */,
+				B361227D8C2F40DAB323FAF6 /* CoreFoundation.framework in Frameworks */,
+				89FE246F2AC84E5CB34EF831 /* SystemConfiguration.framework in Frameworks */,
+				C1AD9961CC2840F3ABDE6995 /* Foundation.framework in Frameworks */,
+				011D7B8BA0F7483D953693A6 /* UIKit.framework in Frameworks */,
+				2A57EF66AA2549C5B80EF4CF /* libresolv.tbd in Frameworks */,
+				34EBB2E8A01A4CFB96288D6D /* CoreGraphics.framework in Frameworks */,
+				97441121D3B2450399E1A5FB /* CoreAudio.framework in Frameworks */,
+				C4199B22E5F04144BC2214D1 /* AudioToolbox.framework in Frameworks */,
+				E0BB0C935E234436BBCAA837 /* MobileCoreServices.framework in Frameworks */,
+				191AFB527FFF452BB3603AE5 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,6 +583,21 @@
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
 				2D16E6891FA4F8E400B85C8A /* libReact.a */,
+				CC633D7CC3424C66BAD0FA6A /* libz.tbd */,
+				7C5118127941450DB98271AB /* UserNotifications.framework */,
+				16BC65F212CA4AFFA14A4452 /* CoreTelephony.framework */,
+				A17492D6AEFB4950A8595C17 /* Security.framework */,
+				45DDDC3FCCF749989C84840C /* CFNetwork.framework */,
+				65E1FF634989497BA6FAB5D0 /* CoreFoundation.framework */,
+				E596F8A45FFD4E4EB23BFC26 /* SystemConfiguration.framework */,
+				07027CC265544B22B31DB215 /* Foundation.framework */,
+				51248B55D6A24E22AA0F34DB /* UIKit.framework */,
+				68D488DDEE9E4F6E87977E5A /* libresolv.tbd */,
+				5611E83648AE43D691135F55 /* CoreGraphics.framework */,
+				9F97776A31774FEBAF91B7F8 /* CoreAudio.framework */,
+				7E9C075FEF2B414E9D4B0E26 /* AudioToolbox.framework */,
+				9691ECE4BC024FCEAC720429 /* MobileCoreServices.framework */,
+				01F3A5E71F1F49D68C6AA738 /* libsqlite3.tbd */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -568,6 +636,8 @@
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				78C3DF5E7CDB405990B7644E /* RNGestureHandler.xcodeproj */,
+				C9D2D041A76A4209A57C265F /* RCTJCoreModule.xcodeproj */,
+				28586659F8AB4E2F94FA88DD /* RCTJMessageModule.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1196,10 +1266,14 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-gesture-handler\ios/**",
+					"$(SRCROOT)\..\node_modules\jcore-react-native\ios\RCTJCoreModule",
+					"$(SRCROOT)\..\node_modules\jmessage-react-plugin\ios\RCTJMessageModule/**",
 				);
 			};
 			name = Debug;
@@ -1222,10 +1296,14 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-gesture-handler\ios/**",
+					"$(SRCROOT)\..\node_modules\jcore-react-native\ios\RCTJCoreModule",
+					"$(SRCROOT)\..\node_modules\jmessage-react-plugin\ios\RCTJMessageModule/**",
 				);
 			};
 			name = Release;
@@ -1249,6 +1327,8 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-gesture-handler\ios/**",
+					"$(SRCROOT)\..\node_modules\jcore-react-native\ios\RCTJCoreModule",
+					"$(SRCROOT)\..\node_modules\jmessage-react-plugin\ios\RCTJMessageModule/**",
 				);
 			};
 			name = Debug;
@@ -1271,6 +1351,8 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-gesture-handler\ios/**",
+					"$(SRCROOT)\..\node_modules\jcore-react-native\ios\RCTJCoreModule",
+					"$(SRCROOT)\..\node_modules\jmessage-react-plugin\ios\RCTJMessageModule/**",
 				);
 			};
 			name = Release;
@@ -1301,10 +1383,14 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-gesture-handler\ios/**",
+					"$(SRCROOT)\..\node_modules\jcore-react-native\ios\RCTJCoreModule",
+					"$(SRCROOT)\..\node_modules\jmessage-react-plugin\ios\RCTJMessageModule/**",
 				);
 			};
 			name = Debug;
@@ -1335,10 +1421,14 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-gesture-handler\ios/**",
+					"$(SRCROOT)\..\node_modules\jcore-react-native\ios\RCTJCoreModule",
+					"$(SRCROOT)\..\node_modules\jmessage-react-plugin\ios\RCTJMessageModule/**",
 				);
 			};
 			name = Release;
@@ -1368,10 +1458,14 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-gesture-handler\ios/**",
+					"$(SRCROOT)\..\node_modules\jcore-react-native\ios\RCTJCoreModule",
+					"$(SRCROOT)\..\node_modules\jmessage-react-plugin\ios\RCTJMessageModule/**",
 				);
 			};
 			name = Debug;
@@ -1401,10 +1495,14 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)\..\node_modules\react-native-gesture-handler\ios/**",
+					"$(SRCROOT)\..\node_modules\jcore-react-native\ios\RCTJCoreModule",
+					"$(SRCROOT)\..\node_modules\jmessage-react-plugin\ios\RCTJMessageModule/**",
 				);
 			};
 			name = Release;

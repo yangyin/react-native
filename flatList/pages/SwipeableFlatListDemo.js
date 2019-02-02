@@ -8,12 +8,22 @@
  */
 
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, FlatList, RefreshControl, ActivityIndicator } from 'react-native';
+import {
+    Platform,
+    StyleSheet,
+    Text,
+    View,
+    FlatList,
+    RefreshControl,
+    ActivityIndicator,
+    SwipeableFlatList,
+    TouchableHighlight
+} from 'react-native';
 
 const DATA = ['北京', '上海', '成都', '广州', '深圳'];
 
 
-export default class FlatLists extends Component {
+export default class SwipeableFlatListDemo extends Component {
 
     state = {
         isLoading: false,
@@ -59,10 +69,26 @@ export default class FlatLists extends Component {
             <Text>加载更多...</Text>
         </View>
     }
+
+    genQuickActions = () => {
+        return <View style={styles.quickCont}>
+            <TouchableHighlight
+                onPress={() => {
+                    alert('确认删除？')
+                }}
+            >
+                <View style={styles.quick}>
+                    <Text style={styles.text2}>删除</Text>
+                </View>
+            </TouchableHighlight>
+        </View>
+    }
+
+
     render() {
         return (
             <View style={styles.container}>
-                <FlatList
+                <SwipeableFlatList
                     data={this.state.dataArr}
                     renderItem={data => this._renderItem(data)}
                     refreshControl={
@@ -80,6 +106,9 @@ export default class FlatLists extends Component {
                     onEndReached={
                         () => this.onRefresh()
                     }
+                    renderQuickActions={() => this.genQuickActions()}
+                    maxSwipeDistance={100}
+                    bounceFirstRowOnMount={false}
                 />
             </View>
         );
@@ -92,7 +121,7 @@ const styles = StyleSheet.create({
     },
     item: {
         backgroundColor: '#169',
-        height: 200,
+        height: 100,
         marginLeft: 15,
         marginRight: 15,
         marginBottom: 15,
@@ -111,5 +140,20 @@ const styles = StyleSheet.create({
     activity: {
         color: 'red',
         margin: 10
+    },
+    quickCont: {
+        flex:1,
+        flexDirection:'row',
+        justifyContent:'flex-end',
+        marginBottom:15,
+        marginRight:15
+    },
+    quick: {
+        backgroundColor:'red',
+        flex:1,
+        alignItems:'flex-end',
+        justifyContent:'center',
+        padding:10,
+        width:200
     }
 });

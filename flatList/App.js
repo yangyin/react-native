@@ -25,6 +25,18 @@ export default class App extends Component {
                         navigation.navigate('FlatList')
                     }}
                 />
+                <Button
+                    title="SwipeList"
+                    onPress={() => {
+                        navigation.navigate('SwipeList')
+                    }}
+                />
+                <Button
+                    title="Section"
+                    onPress={() => {
+                        navigation.navigate('Section')
+                    }}
+                />
             </View>
         );
     }

@@ -8,12 +8,16 @@
  */
 
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, FlatList, RefreshControl, ActivityIndicator } from 'react-native';
+import { Platform, StyleSheet, Text, View, SectionList, RefreshControl, ActivityIndicator } from 'react-native';
 
-const DATA = ['北京', '上海', '成都', '广州', '深圳'];
+const DATA = [
+    { data: ['北京', '上海', '成都', '广州', '深圳'], title: '一线' },
+    { data: ['杭州', '武汉', '郑州', '天津', '石家庄'], title: '二线' },
+    { data: ['洛阳', '厦门', '青岛', '拉萨', '南充'], title: '三线' },
+];
 
 
-export default class FlatLists extends Component {
+export default class SectionListDemo extends Component {
 
     state = {
         isLoading: false,
@@ -59,11 +63,19 @@ export default class FlatLists extends Component {
             <Text>加载更多...</Text>
         </View>
     }
+
+    _renderSectionHeader({section}) {
+        return <View style={styles.sectionHeader}>
+            <Text style={styles.sectionText}>{section.title}</Text>
+        </View>
+    }
+
+
     render() {
         return (
             <View style={styles.container}>
-                <FlatList
-                    data={this.state.dataArr}
+                <SectionList
+                    sections={this.state.dataArr}
                     renderItem={data => this._renderItem(data)}
                     refreshControl={
                         <RefreshControl
@@ -80,6 +92,8 @@ export default class FlatLists extends Component {
                     onEndReached={
                         () => this.onRefresh()
                     }
+                    renderSectionHeader={(data)=>this._renderSectionHeader(data)}
+                    ItemSeparatorComponent={() => <View style={styles.separator} />}
                 />
             </View>
         );
@@ -92,7 +106,7 @@ const styles = StyleSheet.create({
     },
     item: {
         backgroundColor: '#169',
-        height: 200,
+        height: 80,
         marginLeft: 15,
         marginRight: 15,
         marginBottom: 15,
@@ -111,5 +125,16 @@ const styles = StyleSheet.create({
     activity: {
         color: 'red',
         margin: 10
+    },
+    sectionHeader: {
+        height:50,
+        backgroundColor:'#93ebbe',
+        alignItems:'center',
+        justifyContent:'center'
+    },
+    separator :{
+        height:1,
+        backgroundColor:'#ddd',
+        flex:1
     }
 });
