@@ -1,10 +1,10 @@
-package com.test006;
+package com.react_navigation_demo;
 
 import com.facebook.react.ReactActivity;
 
 import com.facebook.react.ReactActivityDelegate;
- import com.facebook.react.ReactRootView;
- import com.swmansion.gesturehandler.react.RNGestureHandlerEnabledRootView;
+import com.facebook.react.ReactRootView;
+import com.swmansion.gesturehandler.react.RNGestureHandlerEnabledRootView;
 
 public class MainActivity extends ReactActivity {
 
@@ -14,10 +14,10 @@ public class MainActivity extends ReactActivity {
      */
     @Override
     protected String getMainComponentName() {
-        return "test006";
+        return "react_navigation_demo";
     }
 
-      @Override
+    @Override
   protected ReactActivityDelegate createReactActivityDelegate() {
     return new ReactActivityDelegate(this, getMainComponentName()) {
       @Override
