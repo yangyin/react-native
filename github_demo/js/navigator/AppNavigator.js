@@ -1,9 +1,10 @@
 import {
     createStackNavigator,
-    createSwitchNavigator
+    createSwitchNavigator,
+    createAppContainer
 } from 'react-navigation';
 import { connect } from 'react-redux'
-import { createReactNavigationReduxMiddleware, createNavigationReducer, createReduxContainer } from 'react-navigation-redux-helpers'
+import { createReactNavigationReduxMiddleware, createReduxContainer } from 'react-navigation-redux-helpers'
 
 import WelcomePage from './../page/WelcomePage'
 import HomePage from './../page/HomePage'
@@ -35,14 +36,16 @@ const Main = createStackNavigator({
     }
 })
 
-export const RootNavigator = createSwitchNavigator({
-    Init: Init,
-    Main: Main,
-}, {
+export const RootNavigator = createAppContainer(createSwitchNavigator(
+    {
+        Init: Init,
+        Main: Main,
+    }, {
         navigationOptions: {
             header: null
         }
-    })
+    }
+))
 
 /**
  * 1.初始化react-navigation 与 redux 的中间件

@@ -1,10 +1,12 @@
 import React from 'react'
-import { StyleSheet, View, Text } from 'react-native'
+import { BackHandler } from 'react-native'
 import {
     createAppContainer,
     createBottomTabNavigator,
+    
 } from 'react-navigation';
 import { BottomTabBar } from 'react-navigation-tabs'
+import { connect } from 'react-redux'
 
 import PopularPage from './../page/PopularPage'
 import TrendingPage from './../page/TrendingPage'
@@ -14,7 +16,7 @@ import MyPage from './../page/MyPage'
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import AntDesign from 'react-native-vector-icons/AntDesign'
-import NavigationUtil from './NavigationUtil';
+import NavigationUtil from './NavigationUtil'
 
 const TABS = {
     PopularPage: {
@@ -80,47 +82,55 @@ class DynamicTabNavigator extends React.Component {
 
 
     _tabNavigator() {
-        const {PopularPage,TrendingPage,FavoritePage, MyPage} = TABS
-        const tabs = {PopularPage, TrendingPage,FavoritePage,MyPage}
+        if (this.Tabs) {
+            return this.Tabs
+        }
+        const { PopularPage, TrendingPage, FavoritePage, MyPage } = TABS
+        const tabs = { PopularPage, TrendingPage, FavoritePage, MyPage }
         PopularPage.navigationOptions.tabBarLabel = '最新' //动态配置Tab属性
-        return createAppContainer(createBottomTabNavigator(tabs,{
-            tabBarComponent:tabBarComponent
+        return this.Tabs = createAppContainer(createBottomTabNavigator(tabs, {
+            // tabBarComponent:tabBarComponent
+            tabBarComponent: props => {
+                return <TabBarComponent {...props} theme={this.props.theme} />
+            }
         }))
     }
 
     render() {
-        NavigationUtil.navigation = this.props.navigation
         const Tab = this._tabNavigator();
         return <Tab />;
     }
 }
 
-class tabBarComponent extends React.Component {
+class TabBarComponent extends React.Component {
     constructor(props) {
         super(props)
         this.theme = {
-            tintColor:props.activeTintColor,
-            updateTime:new Date().getTime()
+            tintColor: props.activeTintColor,
+            updateTime: new Date().getTime()
         }
     }
 
     render() {
-        const { routes,index } = this.props.navigation.state
-        if(routes[index].params) {
-            const { theme } = routes[index].params
-            if(theme && theme.updateTime > this.theme.updateTime) {
-                this.theme = theme
-            }
-        }
-        return <BottomTabBar 
+        // const { routes,index } = this.props.navigation.state
+        // if(routes[index].params) {
+        //     const { theme } = routes[index].params
+        //     if(theme && theme.updateTime > this.theme.updateTime) {
+        //         this.theme = theme
+        //     }
+        // }
+        return <BottomTabBar
             {...this.props}
-            activeTintColor={this.theme.tintColor || this.props.activeTintColor}
+            activeTintColor={this.props.theme}
+        // activeTintColor={this.theme.tintColor || this.props.activeTintColor}
         />
     }
 }
 
-const styles = StyleSheet.create({
-
+const mapStateToProps = state => ({
+    theme: state.theme.theme,
 })
 
-export default DynamicTabNavigator
+
+export default connect(mapStateToProps)(DynamicTabNavigator)
+// export default DynamicTabNavigator

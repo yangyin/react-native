@@ -1,24 +1,33 @@
 import React from 'react'
-import { StyleSheet, View, Text } from 'react-native'
+import { StyleSheet, BackHandler } from 'react-native'
 import {
-    createAppContainer,
-    createBottomTabNavigator
+    NavigationActions
 } from 'react-navigation';
+import { connect } from 'react-redux';
 
-import PopularPage from './PopularPage'
-import TrendingPage from './TrendingPage'
-import FavoritePage from './FavoritePage'
-import MyPage from './MyPage'
-
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
-import Ionicons from 'react-native-vector-icons/Ionicons'
-import AntDesign from 'react-native-vector-icons/AntDesign'
 import NavigationUtil from '../navigator/NavigationUtil';
 import DynamicTabNavigator from '../navigator/DynamicTabNavigator';
 
 
 class HomePage extends React.Component {
 
+    componentDidMount() {
+        BackHandler.addEventListener('hardwareBackPress',this.onBackPress)
+    }
+
+    componentWillUnmount() {
+        BackHandler.removeEventListener('hardwareBackPress',this.onBackPress)
+    }
+
+    onBackPress = () => {
+        const { dispatch , nav } = this.props
+        if(nav.routes[1].index === 0) {
+            return false
+        }
+
+        dispatch(NavigationActions.back())
+        return true
+    }
 
    /*  _tabNavigator() {
         return createAppContainer(createBottomTabNavigator({
@@ -89,4 +98,8 @@ const styles = StyleSheet.create({
 
 })
 
-export default HomePage
+const mapStateToProps = state => ({
+    nav: state.nav
+})
+
+export default connect(mapStateToProps)(HomePage)
