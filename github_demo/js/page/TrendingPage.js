@@ -2,6 +2,7 @@ import React from 'react'
 import { StyleSheet, View,Text,Button } from 'react-native'
 import { connect } from 'react-redux'
 import actions from './../action'
+import RongyunUtil from './../utils/rongyun'
 
 class TrendingPage extends React.Component {
 
@@ -14,6 +15,7 @@ class TrendingPage extends React.Component {
                     title="改变主题色"
                     onPress={() => {
                         this.props.onThemeChange('#096')
+                        RongyunUtil.onPageStart('111')
                         // navigation.setParams({
                         //     theme:{
                         //         tintColor:'red',

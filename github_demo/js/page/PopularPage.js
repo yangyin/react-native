@@ -5,7 +5,7 @@ import {
     createAppContainer
 } from 'react-navigation'
 import NavigationUtil from './../navigator/NavigationUtil'
-import { white } from 'ansi-colors';
+
 
 class PopularPage extends React.Component {
     constructor(props) {
