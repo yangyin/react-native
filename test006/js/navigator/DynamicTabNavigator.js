@@ -144,7 +144,7 @@ class DynamicTabNavigator extends React.Component {
             return this.Tabs;
         }
         const { Tab1, Tab2, Tab3, Tab4 } = TABS;
-        const tabs = { Tab1, Tab3 }
+        const tabs = { Tab1,Tab2, Tab3,Tab4 }
         return this.Tabs = createAppContainer(createBottomTabNavigator(tabs,
             {
                 // tabBarComponent:TabBarComponent
